@@ -1,0 +1,17 @@
+services:
+  mssql_db:
+    container_name: mssql_container
+    image: mcr.microsoft.com/mssql/server:2025-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "${MSSQL_SA_PASSWORD}"
+    ports:
+      - "1433:1433"
+    # restart: always
+    # Keep commented out during development.
+    # Uncomment when running Media Vault on a server.
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+volumes:
+  sqlserver_data:

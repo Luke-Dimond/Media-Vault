@@ -1,4 +1,20 @@
+using System.Data.Common;
+using DotNetEnv;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Load environment variables from .env
+Env.Load();
+
+var connectionString = Environment.GetEnvironmentVariable("MSSQL_CONNECTION_STRING") 
+    ?? throw new InvalidOperationException(
+        "No Database connection found in MSSQL_CONNECTION_STRING environment variable.");
+
+builder.Services.AddDbContext<AppDbContext>(options => 
+    options.UseSqlServer(connectionString)
+);
 
 // Add services to the container.
 
