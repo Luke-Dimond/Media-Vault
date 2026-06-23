@@ -1,0 +1,18 @@
+/* Global variables */
+
+:root {
+/* Colours */
+  --colour-graphite: #333533;
+  --colour-static-blue: #00FFFF;
+  --colour-carbon-black: #202020;
+  --colour-school-bus-yellow: #ffc300;
+  --colour-gold: #ffd60a;
+  --colour-white: #FFFFFF;
+
+  --colour-background: var(--colour-carbon-black);
+  --colour-background-light: var(--colour-graphite);
+  --colour-surface: var(--colour-prussian-blue);
+
+  --colour-primary: var( --colour-white);
+  --colour-primary-2: var(--colour-static-blue);
+}

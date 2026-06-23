@@ -1,0 +1,8 @@
+@import './variables.css';
+
+body {
+   margin: 0;
+   background: var(--colour-background);
+   background-repeat: no-repeat;
+   min-height: 100vh;
+}
