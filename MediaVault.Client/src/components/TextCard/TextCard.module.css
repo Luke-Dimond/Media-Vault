@@ -1,0 +1,6 @@
+.textCardStyle {
+    background-color: var(--colour-background-light);
+    padding: 1rem;
+    color: white;
+    margin: 2.5rem;
+}

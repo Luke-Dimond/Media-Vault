@@ -1,4 +1,5 @@
 import styles from './Header.module.css'
+import {Link} from 'react-router'
 
 function Header() {
 
@@ -8,10 +9,10 @@ function Header() {
 
             <nav>
                 <ul className={styles.navList}>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV Shows</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/">Games</Link></li>
+                    <li><Link to="/">Movies</Link></li>
+                    <li><Link to="/">TV Shows</Link></li>
                 </ul>
             </nav>
         </header>

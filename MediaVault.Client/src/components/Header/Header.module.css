@@ -2,6 +2,7 @@
    list-style: none;
    display: flex;
    gap: 1rem;
+   flex-direction: row;
    padding: 0;
    margin: 0;
 }
@@ -9,7 +10,9 @@
 .navList li a {
    color: var(--colour-primary);
    font-weight: bold;
+   font-size: 1rem;
    text-decoration: none;
+   text-align: center;
 }
 
 .navList li a:hover {
@@ -21,7 +24,6 @@
    color: var(--colour-primary-2);
 }
 
-
 .headerStyle {
    background-color: var(--colour-background-light);
    justify-content: center;
@@ -30,5 +32,43 @@
    gap: 1rem;
    flex-direction: column;
    text-align: center;
-   padding: 1rem
+   padding: 1rem;
+   width: auto;
+   height: auto;
+}
+
+@media (min-width: 768px) {
+   
+   .headerStyle {
+      align-items: start;
+      padding-left: 2rem;
+      width: 250px;
+      height: 100vh;
+      justify-content: flex-start;
+      padding: 2rem
+   }
+
+   .title {
+      margin-bottom: 2rem;
+   }
+
+   .navList {
+      flex-direction: column;
+      gap: 3rem;
+      text-align: start;
+   }
+
+   .navList li a {
+      color: var(--colour-primary);
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-decoration: none;
+   }
+
+   .navList li a:hover {
+      background-color: var(--colour-background);
+      border-radius: 25px;
+      padding: 1rem;
+   }
+
 }
